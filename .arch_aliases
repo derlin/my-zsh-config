@@ -1,0 +1,47 @@
+alias sctl='sudo systemctl'
+
+### Pacman aliases
+alias pacupg='sudo pacman -Syu'    # Synchronize with repositories and then upgrade packages that are out of date on the local system.
+alias pacins='sudo pacman -S'      # Install specific package(s) from the repositories
+alias pacfins='sudo pacman -U'     # Install specific package not from the repositories but from a file 
+alias pacrem='sudo pacman -R'      # Remove the specified package(s), retaining its configuration(s) and required dependencies
+alias pacpurge='sudo pacman -Rns'  # Remove the specified package(s), its configuration(s) and unneeded dependencies
+alias pacinfo='pacman -Si'         # Display information about a given package in the repositories
+alias pacs='pacman -Ss'            # Search for package(s) in the repositories
+alias pacloci='pacman -Qi'         # Display information about a given package in the local database
+alias paclocs='pacman -Qs'         # Search for package(s) in the local database
+
+alias pacorph="pacman -Qdt"       # List all packages which are orphaned
+
+# Additional pacman alias examples
+alias pacupd='sudo pacman -Sy && sudo abs' # Update and refresh the local package and ABS databases against repositories
+alias pacinsdep='sudo pacman -S --asdeps'  # Install given package(s) as dependencies of another package
+alias pacmir='sudo pacman -Syy'            # Force refresh of all package lists after updating /etc/pacman.d/mirrorlist
+
+
+alias suspend='sudo systemctl suspend'
+
+
+alias svm='sudo vim'
+alias clipme='xclip -sel clip <'
+alias easycmd='/home/lucy/git/easypass_commandline/easypass.pl -p "/home/lucy/Dropbox/Applications/Linder Easypass" -s serieux'
+alias easypass='/opt/java/jdk1.8.0_05/bin/java -jar /home/lucy/Dropbox/projets/easypass/easypass.jar &>/dev/null &'
+alias cybe='/home/lucy/git/perl-misc/CybeSync/scripts/cybe '
+
+## vpn connection to hefr
+alias vpnc='/data/MyBin/vpnc && echo '
+alias vpnd='/data/MyBin/vpnd && echo '
+# mount transfert (donprof)
+alias hefr_ata_transfert='[ -d /tmp/transfert ] || mkdir /tmp/transfert; sudo mount -t cifs //hefrfas01/transfert_ata_hefr$ /tmp/transfert -o username=lucy.linder && nemo /tmp/transfert'
+
+## ssh
+alias sshpi='ssh pi@raspbmc.local'
+alias sshcym='ssh lucy@cymbalta.local'
+alias sshlabs='ssh lucy.linder@c0004-27.tic.eia-fr.ch';
+alias sshblock="ssh bibi@block-a-bibi.local"
+
+#################
+
+alias lamppOnCymbalta="sudo ssh -L 80:localhost:80 -N lucy@cymbalta.local"
+alias java8=/opt/java/jdk1.8.0_05/bin/java
+alias cybe-java="java8 -jar /home/lucy/Dropbox/projets/cybe-java/cybe-build/jar/cybe-1.0-bin.jar"
