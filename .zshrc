@@ -175,3 +175,11 @@ bindkey "^[[1;6D" backward-delete-word
 bindkey "^[[1;6C" delete-word
 bindkey "^[[3~"   delete-char
 bindkey '^R' history-incremental-search-backward
+
+#}}}
+# -------------- other
+#{{{ other
+if [ -n "$SSH_CLIENT" ] || [ -n "$SSH_TTY" ]; then
+    PS1=`hostname`$PS1
+fi
+#}}}
